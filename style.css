@@ -224,6 +224,43 @@ header nav ul li a:hover {
     margin-right: 10px;
 }
 
+@media (max-width: 768px) {
+    .hero {
+        padding: 150px 20px 80px; /* Reduced padding on smaller screens */
+        margin-top: 200px; /* Adjusted for better spacing */
+    }
+
+    .hero h2 {
+        font-size: 28px; /* Reduced heading size on smaller screens */
+        margin-bottom: 10px;
+    }
+
+    .hero p {
+        font-size: 16px; /* Slightly smaller font for mobile */
+        margin-bottom: 20px;
+    }
+
+    .hero form {
+        width: 100%;  /* Full width for the form on mobile */
+        flex-direction: column; /* Stack form elements vertically */
+        align-items: stretch; /* Make input and button full width */
+        padding: 15px;
+    }
+
+    .hero form input {
+        width: 100%; /* Make input take full width */
+        margin-bottom: 10px; /* Space between input and button */
+    }
+
+    .hero form button {
+        width: 100%; /* Full width button on mobile */
+        margin-left: 0; /* Remove margin on smaller screens */
+    }
+
+    .search-icon {
+        font-size: 18px; /* Smaller icon on mobile */
+    }
+}
 
 /* About and Significance Section */
 .about-significance-section {

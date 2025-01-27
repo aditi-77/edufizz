@@ -112,4 +112,22 @@ fetch('colleges.json')
         console.error("Error fetching colleges:", error);
     });
 
+    function searchCollege() {
+  const searchQuery = document.getElementById('collegeSearch').value.toLowerCase();
   
+  fetch('colleges.json')
+    .then(response => response.json())
+    .then(data => {
+      const colleges = data.colleges;
+      const college = colleges.find(college => college.name.toLowerCase() === searchQuery);
+      
+      if (college) {
+        window.location.href = college.url; // Redirect to the found college's page
+      } else {
+        alert('College not found!');
+      }
+    })
+    .catch(error => {
+      console.error('Error fetching the college data:', error);
+    });
+}
