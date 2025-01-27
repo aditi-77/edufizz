@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stanford-university</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stanford-university.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/Edufizz logo.png" alt="">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#colleges">Colleges</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#college-counseling">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="cover">
+        <div class="cover-overlay"></div>
+        <div class="cover-text">
+          <h2>Stanford University</h2>
+          <p>Stanford, CA - A Hub for Innovation and Excellence</p>
+        </div>
+        <div class="talk-to-experts">
+          <button class="talk-to-experts-btn" onclick="openTalkToExpertForm()">Get Free Counselling</button>
+      </div>
+      </div>
+      </div>
+
+      <!-- Talk to Expert Form Popup (Modal) -->
+    <div id="talkToExpertFormPopup" class="form-popup">
+      <div class="form-container">
+          <span class="close-btn" onclick="closeTalkToExpertForm()">&times;</span>
+          <h2>Talk to an Expert</h2>
+          <form id="talkToExpertForm">
+              <label for="expert-name">Name:</label>
+              <input type="text" id="expert-name" name="name" placeholder="Enter your name" required>
+
+              <label for="expert-email">Email:</label>
+              <input type="email" id="expert-email" name="email" placeholder="Enter your email" required>
+
+              <label for="phone">Phone Number:</label>
+              <input type="text" id="phone" placeholder="Enter your phone number" required>
+              <button type="submit">Submit</button>
+          </form>
+      </div>
+  </div>
+
+      <div class="content">
+
+        <!-- Image Gallery Section -->
+        <div class="section">
+          <h2>Gallery</h2>
+          <p>Take a look at our beautiful campus and facilities:</p>
+          <div class="image-gallery">
+            <img src="images/su-img1.webp" alt="Stanford Campus 1">
+            <img src="images/su-img2.jpeg" alt="Stanford Campus 2">
+            <img src="images/su-img3.jpeg" alt="Stanford Campus 3">
+            <img src="images/su-img4.jpeg" alt="Stanford Campus 4">
+          </div>
+        </div>
+      
+
+        <!-- About Section -->
+        <div class="section">
+          <h2>About Stanford University</h2>
+          <p><strong>Stanford University</strong>, located in Stanford, California, is one of the most prestigious universities in the world. Known for its rigorous academics and innovation, Stanford is home to cutting-edge research in engineering, business, and science.</p>
+          <ul>
+            <li><strong>Established:</strong> 1891</li>
+            <li><strong>Campus Size:</strong> 8,180 acres</li>
+            <li><strong>Student Population:</strong> 16,000+</li>
+            <li><strong>Notable Alumni:</strong> Elon Musk, Larry Page, Sundar Pichai</li>
+            <li><strong>Global Ranking:</strong> Top 5 consistently</li>
+            <li><strong>Research Funding:</strong> Over $1 billion annually</li>
+          </ul>
+          <a href="https://www.stanford.edu" class="cta-button">Visit Website</a>
+        </div>
+    
+        <!-- Courses Section -->
+        <div class="section">
+          <h2>Courses Offered</h2>
+          <p>Stanford University offers a wide range of programs designed to foster creativity and innovation. Popular fields of study include:</p>
+          <ul>
+            <li><strong>Engineering:</strong> Electrical, Mechanical, Civil, and Chemical Engineering programs.</li>
+            <li><strong>Biology:</strong> Programs focusing on Genetics, Biotechnology, and Environmental Science.</li>
+            <li><strong>Design:</strong> Courses that merge creativity with technology for innovative designs.</li>
+            <li><strong>Computer Science:</strong> AI, Machine Learning, and Data Science.</li>
+            <li><strong>Business:</strong> MBA, Finance, and Entrepreneurship programs.</li>
+          </ul>
+        </div>
+    
+        <!-- Facilities Section -->
+        <div class="section">
+          <h2>Campus Facilities</h2>
+          <p>Stanford provides state-of-the-art facilities to support student life and learning:</p>
+          <ul>
+            <li>World-class libraries with millions of volumes.</li>
+            <li>Modern research labs with cutting-edge technology.</li>
+            <li>Sports and recreation facilities, including a stadium and Olympic-size swimming pools.</li>
+            <li>On-campus housing with various living arrangements.</li>
+            <li>Centers for arts and performances.</li>
+          </ul>
+        </div>
+    
+        <!-- Contact Section -->
+        <div class="section">
+          <h2>University Contact Details</h2>
+          <p>If you have any questions, feel free to reach out to us. Our team is here to help you with your college admissions process.</p>
+          <ul>
+            <li><strong>Email:</strong> admissions@stanford.edu</li>
+            <li><strong>Phone:</strong> +1 650-723-2300</li>
+            <li><strong>Address:</strong> 450 Serra Mall, Stanford, CA 94305, USA</li>
+            <li><strong>Office Hours:</strong> Monday - Friday, 9 AM - 5 PM</li>
+          </ul>
+        </div>
+        
+        
+      
+
+    <script src="script.js"></script>
+</body>
+</html>

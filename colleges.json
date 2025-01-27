@@ -1,0 +1,76 @@
+[
+    {
+      "id": 1,
+      "name": "Massachusetts Institute",
+      "location": "Cambridge, MA",
+      "courses": ["Computer Science", "Physics", "Mathematics"],
+      "website": "https://www.mit.edu",
+      "image": "images/MIT.png"
+    },
+    {
+      "id": 2,
+      "name": "Harvard University",
+      "location": "Cambridge, MA",
+      "courses": ["Business", "Law", "Medicine"],
+      "website": "https://www.harvard.edu",
+      "image": "images/MIT.png"
+    },
+    {
+      "id": 3,
+      "name": "Stanford University",
+      "location": "Stanford, CA",
+      "courses": ["Engineering", "Biology", "Design"],
+      "website": "https://www.stanford.edu",
+      "image": "images/MIT.png"
+    },
+    {
+      "id": 4,
+      "name": "University of California, Berkeley",
+      "location": "Berkeley, CA",
+      "courses": ["Electrical Engineering", "Environmental Science", "Law"],
+      "website": "https://www.berkeley.edu",
+      "image": "images/MIT.png"
+    },
+    {
+        "id": 5,
+        "name": "University of Oxford",
+        "location": "Oxford, UK",
+        "courses": ["Philosophy", "Economics", "Literature"],
+        "website": "https://www.ox.ac.uk",
+        "image": "images/MIT.png"
+      },
+      {
+        "id": 6,
+        "name": "Stanford University",
+        "location": "Stanford, CA",
+        "courses": ["Engineering", "Biology", "Design"],
+        "website": "https://www.stanford.edu",
+        "image": "images/MIT.png"
+      },
+      {
+        "id": 7,
+        "name": "Stanford University",
+        "location": "Stanford, CA",
+        "courses": ["Engineering", "Biology", "Design"],
+        "website": "https://www.stanford.edu",
+        "image": "images/MIT.png"
+      },
+      {
+        "id": 8,
+        "name": "Stanford University",
+        "location": "Stanford, CA",
+        "courses": ["Engineering", "Biology", "Design"],
+        "website": "https://www.stanford.edu",
+        "image": "images/MIT.png"
+      },
+      {
+        "id": 9,
+        "name": "Stanford University",
+        "location": "Stanford, CA",
+        "courses": ["Engineering", "Biology", "Design"],
+        "website": "https://www.stanford.edu",
+        "image": "images/MIT.png"
+      }
+ 
+  ]
+  

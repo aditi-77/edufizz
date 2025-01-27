@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduFizz - College Search</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/Edufizz logo.png" alt="">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#colleges">Colleges</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#college-counseling">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Find Your Dream College</h2>
+            <p>Explore and compare top colleges across the country.</p>
+            <form id="searchForm">
+                <input type="text" id="searchQuery" placeholder="Enter College Name" required>
+                <button type="search-submit"><span class="search-icon">&#128269;</span> Search</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="enhanced-graphics" class="enhanced-graphics-section">
+        <div class="explore">Explore</div>
+        <div class="content-wrapper">
+            <div class="image-card">
+                <img src="images/img 1.jpg" alt="College Counseling" class="card-image">
+                <div class="overlay">
+                    <h3 class="card-title">Find Your Dream College</h3>
+                    <p class="card-description">Explore top colleges, courses, and scholarships to make an informed decision.</p>
+                </div>
+            </div>
+    
+            <div class="image-card">
+                <img src="images/img 2.jpg" alt="Counseling Sessions" class="card-image">
+                <div class="overlay">
+                    <h3 class="card-title">Personalized Counseling</h3>
+                    <p class="card-description">Get expert advice tailored to your needs and aspirations.</p>
+                </div>
+            </div>
+    
+            <div class="image-card">
+                <img src="images/img 3.jpg" alt="Course Comparison" class="card-image">
+                <div class="overlay">
+                    <h3 class="card-title">Compare Courses</h3>
+                    <p class="card-description">Make informed choices by comparing courses, fees, and placement opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-significance-section">
+        <div class="content-wrapper">
+            <!-- About Us -->
+            <div class="about-us">
+                <h2>About Us</h2>
+                <p>
+                    At <strong>EduFizz</strong>, we are dedicated to helping students discover the perfect colleges
+                    to match their dreams and aspirations. With our advanced tools and curated data,
+                    we simplify the college search process, making it accessible to everyone.
+                </p>
+            </div>
+
+            <!-- Significance -->
+            <div class="significance">
+                <h2>Why Choose EduFizz?</h2>
+                <p>
+                    EduFizz provides a one-stop solution for students to explore top colleges, compare
+                    courses, and make informed decisions. Our platform emphasizes transparency, user-friendliness,
+                    and comprehensive data to guide you through every step of your academic journey.
+                </p>
+            </div>
+
+            <div class="talk-to-experts">
+                <button class="talk-to-experts-btn" onclick="openTalkToExpertForm()">Get Free Counselling</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Talk to Expert Form Popup (Modal) -->
+    <div id="talkToExpertFormPopup" class="form-popup">
+        <div class="form-container">
+            <span class="close-btn" onclick="closeTalkToExpertForm()">&times;</span>
+            <h2>Talk to an Expert</h2>
+            <form id="talkToExpertForm">
+                <label for="expert-name">Name:</label>
+                <input type="text" id="expert-name" name="name" placeholder="Enter your name" required>
+
+                <label for="expert-email">Email:</label>
+                <input type="email" id="expert-email" name="email" placeholder="Enter your email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" placeholder="Enter your phone number" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+   
+
+    <section id="colleges" class="colleges">
+        <h2>Top Colleges</h2>
+        <div class="college-list" id="collegeList">
+            <!-- College results will be shown here dynamically -->
+        </div>
+        <div>
+            <button class="explore-more-btn"><a href="colleges.html">Explore more colleges</a></button>
+        </div>
+    </section>
+
+    <!-- Counselling Form Popup -->
+    <div id="counselFormPopup" class="popup-form">
+        <div class="form-content">
+            <span class="close-btn" onclick="closePopup('counselFormPopup')">&times;</span>
+            <h2>Get Counselling for <span id="counselCollegeName"></span></h2>
+            <form>
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" placeholder="Enter your phone number" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Apply Form Popup (Modal) -->
+    <div id="applyFormPopup" class="form-popup">
+        <div class="form-container">
+            <span class="close-btn" onclick="closeApplyForm()">&times;</span>
+            <h2>Apply for <span id="applyCollegeName"></span></h2>
+            <form id="applyForm">
+                <label for="applicantName">Name:</label>
+                <input type="text" id="applicantName" name="name" placeholder="Enter your name" required>
+
+                <label for="applicantEmail">Email:</label>
+                <input type="email" id="applicantEmail" name="email" placeholder="Enter your email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" placeholder="Enter your phone number" required>
+                <button type="submit">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    
+    <section id="testimonials" class="testimonials">
+        <h2>What Our Students Say</h2>
+        <div class="testimonial-list">
+            <div class="testimonial-card">
+                <img src="images/student -img.webp" alt="Student 1">
+                <p>"EduFizz helped me find the perfect college for my career goals. The search process was simple and
+                    efficient!"</p>
+                <h3>John Doe</h3>
+                <p>Computer Science, MIT</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="images/student -img.webp" alt="Student 2">
+                <p>"I never thought I would find a college that matches my interests so well. EduFizz made it happen!"
+                </p>
+                <h3>Jane Smith</h3>
+                <p>Business, Harvard</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="images/student -img.webp" alt="Student 3">
+                <p>"The search filters on EduFizz are amazing! I found exactly what I was looking for in no time."</p>
+                <h3>Samuel Lee</h3>
+                <p>Engineering, Stanford</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- College Counseling Quiz Section -->
+<section id="college-counseling" class="college-counseling-section">
+    <section class="vector-image">
+        <div>
+        </div>
+    </section>
+    <h2>College Counseling Quiz</h2>
+    <p>Answer a few questions to get personalized college guidance.</p>
+
+    <div id="quiz-container">
+        <button id="start-btn" onclick="startQuiz()">Start the Quiz</button>
+    </div>
+    
+    <div id="quiz-content" class="hidden">
+        <div id="question-container"></div>
+        <button id="next-btn" onclick="nextQuestion()">Next</button>
+    </div>
+
+    <div id="form-container" class="hidden">
+        <h3>Thank you for completing the quiz!</h3>
+        <p>Our expert will contact you soon to discuss your college options.</p>
+        <form id="request-call-form">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="interest">What is your preferred course/stream?</label>
+            <input type="text" id="interest" name="interest" required>
+
+            <label for="college">Do you have any particular college in mind?</label>
+            <input type="text" id="college" name="college">
+
+            <button type="submit">Request Call</button>
+        </form>
+    </div>
+</section>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Subscription Section -->
+            <div class="subscription">
+                <h3>Subscribe to Our Newsletter</h3>
+                <p>Stay updated with the latest college news and insights.</p>
+                <form class="subscription-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+
+            <!-- Contact Us Section -->
+            <div class="contact-us">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><strong>Email:</strong> support@edufizz.com</li>
+                    <li><strong>Phone:</strong> +1 234 567 890</li>
+                    <li><strong>Address:</strong> 123 EduFizz Lane, Knowledge City, USA</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 EduFizz. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="quiz.js"></script>
+            
+</body>
+
+</html>

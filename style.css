@@ -1,0 +1,896 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #56a7ff;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #56a7ff;
+    color: #ffffff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+header .logo {
+    background-image: url("images/Edufizz\ logo.png");
+}
+
+header .logo img {
+    height: 100px;
+    /* Adjust the height as needed */
+    max-width: 100%;
+    object-fit: contain;
+}
+
+header nav {
+    padding: 20px 40px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 25px;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ff6f61;
+}
+
+/* Enhanced Graphics Section */
+.enhanced-graphics-section {
+    padding: 80px 20px;
+    background-color: #f0f8ff;
+}
+
+.explore {
+    text-align: center;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.image-card {
+    position: relative;
+    flex: 1;
+    min-width: 280px;
+    max-width: 32%;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.image-card:hover .card-image {
+    opacity: 0.7;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    opacity: 0;
+    padding: 40px;
+    text-align: center;
+    transition: opacity 0.3s ease;
+    border-radius: 15px;
+}
+
+.image-card:hover .overlay {
+    opacity: 1;
+}
+
+.card-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-description {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-card {
+        max-width: 90%;
+    }
+}
+
+.vector-image {
+    background-image: url('images/counsel.jpg');
+    background-size: contain;
+    /* Ensures the whole image fits within the background */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    height: 50vh;
+    /* Makes the background cover the full viewport height */
+    width: 100%;
+    /* Makes the background span the full width */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #0073e6, #5ab0e6);
+    color: white;
+    padding: 200px 20px 100px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero form {
+    display: inline-flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    overflow: hidden;
+}
+
+.hero form input {
+    padding: 12px;
+    width: 250px;
+    border: none;
+    font-size: 16px;
+    border-radius: 20px;
+    outline: none;
+}
+
+.hero form button {
+    padding: 12px 20px;
+    margin-left: 10px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.hero form button:hover {
+    background-color: #ff5733;
+}
+
+.search-icon {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+
+/* About and Significance Section */
+.about-significance-section {
+    padding: 100px 20px;
+    background-color: #ffffff;
+    border-radius: 20px 20px 0px 0px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Overlay */
+.about-significance-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    /* Overlay for readability */
+    z-index: 1;
+}
+
+.about-significance-section .content-wrapper {
+    position: relative;
+    z-index: 2;
+    /* Place content above overlay */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    /* Space between sections */
+}
+
+/* Section Headings */
+.about-us h2,
+.significance h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #0073e6;
+    /* Eye-catching color */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.about-us p,
+.significance p {
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.talk-to-experts-btn {
+    background-color: #0073e6;
+    color: white;
+    font-size: 20px;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.talk-to-experts-btn:hover {
+    background-color: #005bb5;
+}
+
+/* Colleges Section */
+.colleges {
+    padding: 70px 70px;
+    text-align: center;
+    background-image: url("images/cap-throw.jpg");
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.colleges h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: rgb(81, 80, 80);
+    text-shadow: #333;
+}
+
+.college-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 80px;
+    /* Increased gap between cards */
+    justify-content: center;
+    align-items: center;
+}
+
+.college-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    height: 400px;
+    width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.college-card:hover {
+    transform: translateY(-10px);
+    /* Lift the card slightly */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Add a deeper shadow */
+}
+
+.college-card img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.college-card h3 {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.college-card p {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.college-card p i {
+    color: #0073e6;
+    /* Icon color */
+    font-size: 16px;
+    /* Icon size */
+}
+
+.college-card a {
+    text-decoration: none;
+    color: #0073e6;
+}
+
+.college-card .get-counselling-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.college-card .get-counselling-btn:hover {
+    background-color: #005bb5;
+}
+
+
+
+.popup-form {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.form-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    position: relative;
+}
+
+.form-content h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.form-content label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.form-content input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-content button {
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-content button:hover {
+    background-color: #005bb5;
+}
+
+.form-content .close-btn {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    font-size: 25px;
+    /* Increase size to make it more visible */
+    color: #333;
+    cursor: pointer;
+    z-index: 1100;
+    /* Ensure the button is above all content */
+}
+
+.college-card .apply-now-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: #ffffff;
+    color: #0073e6;
+    padding: 8px 12px;
+    border: 5px #0073e6;
+    border-radius: 5px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.college-card .apply-now-btn:hover {
+    background-color: #005bb5;
+    color: white;
+}
+
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    position: relative;
+}
+
+.form-container .close-btn {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    font-size: 25px;
+    /* Increase size to make it more visible */
+    color: #333;
+    cursor: pointer;
+    z-index: 1100;
+    /* Ensure the button is above all content */
+}
+
+.form-container h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #005bb5;
+}
+
+.explore-more-btn {
+    background-color: #0073e6;
+    color: white;
+    margin-top: 40px;
+    border: none;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.explore-more-btn:hover {
+    background-color: #005bb5;
+}
+
+.explore-more-btn a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Student Testimonial Section */
+.testimonials {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.testimonials h2 {
+    font-size: 35px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: #333;
+}
+
+.testimonial-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background-color: #f9f9f9;
+    padding: 30px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+}
+
+.testimonial-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.testimonial-card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.testimonial-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.testimonial-card p:last-of-type {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #33485d;
+    /* Dark blue-gray background */
+    color: #ecf0f1;
+    /* Light text color */
+    padding: 50px 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.subscription,
+.contact-us {
+    text-align: center;
+    flex: 1;
+}
+
+.subscription h3,
+.contact-us h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #56a7ff;
+    /* Highlight color */
+}
+
+.subscription p,
+.contact-us ul {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #bdc3c7;
+}
+
+.subscription-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.subscription-form input {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #7f8c8d;
+    outline: none;
+    width: 250px;
+    font-size: 16px;
+}
+
+.subscription-form button {
+    padding: 10px 20px;
+    background-color: #56a7ff;
+    color: #2c3e50;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscription-form button:hover {
+    background-color: #4622e6;
+}
+
+.contact-us ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-us ul li {
+    margin-bottom: 10px;
+}
+
+.contact-us ul li strong {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    border-top: 1px solid #34495e;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #95a5a6;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .about-significance-section .content-wrapper {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .about-us,
+    .significance {
+        flex: 1;
+        padding: 0 20px;
+        max-width: 600px;
+    }
+
+    .college-list {
+        flex-direction: column;
+    }
+
+    .college-card {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .testimonial-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .subscription,
+    .contact-us {
+        text-align: left;
+    }
+}
+
+/* Style for the College Counseling Section */
+.college-counseling-section {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 70px;
+    margin: 70px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.college-counseling-section h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: #2c3e50;
+}
+
+.college-counseling-section p {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #7f8c8d;
+}
+
+.college-counseling-section button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+}
+
+.college-counseling-section button:hover {
+    background-color: #2980b9;
+}
+
+.college-counseling-section .hidden {
+    display: none;
+}
+
+.college-counseling-section #form-container h3 {
+    text-align: center;
+}
+
+
+.college-counseling-section form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.college-counseling-section form label {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.college-counseling-section form input,
+form select,
+form textarea {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.college-counseling-section form button {
+    background-color: #0073e6;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.college-counseling-section form button:hover {
+    background-color: #005bb5;
+}
+
+.college-counseling-section #quiz-content {
+    margin-top: 20px;
+}
+
+.college-counseling-section #question-container {
+    margin-bottom: 15px;
+}
+
+.college-counseling-section input[type="radio"] {
+    margin-right: 10px;
+}
+
+
+  
