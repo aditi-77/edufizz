@@ -348,7 +348,7 @@ header nav ul li a:hover {
 .college-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 80px;
+    gap: 50px;
     /* Increased gap between cards */
     justify-content: center;
     align-items: center;
